@@ -6,5 +6,5 @@ console.log(__dirname.length);
 let index = __dirname.indexOf('node_modules');
 console.log(index)
 
-let result = __dirname.substring(0, index + __dirname.length);
+let result = __dirname.substring(0, index);
 console.log(result);
