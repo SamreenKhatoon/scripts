@@ -7,6 +7,9 @@
     "sitecore" : "node scripts/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin" : {
+    "sitecore" : "cli/index.js"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
