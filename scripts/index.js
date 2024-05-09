@@ -22,7 +22,7 @@ async function main(){
     if(optResponse.choice === 'start'){
 
         //add check for env file. move env file reading to init and return full config instead
-        const project ={project_env : "development", project_name : "", };
+        const project ={project_env : "development", project_name : "", project_step : "start"};
         projectSelected = project.project_name;
         projectEnv = project.project_env;
         // const projectPath = fg.convertPathToPattern(process.env[`PROJECT_${projectSelected.toUpperCase()}`]);
