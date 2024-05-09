@@ -15,15 +15,16 @@ async function main(){
     //     throw new Error(".env file does not exist. Create one with the project paths specified");
     // }
 
-    // const optResponse = await init.chooseOption();
-    const optResponse = {choice : "start"}
+    const optResponse = await init.chooseOption();
+    // const optResponse = {choice : "start"}
 
     let initStatus = { 'status' : "error", "msg" : "init failed"};
     if(optResponse.choice === 'start'){
 
         //add check for env file. move env file reading to init and return full config instead
-        const project ={project_env : "development", project_name : "", project_step : "start"};
-        projectSelected = project.project_name;
+        const project = await init.selectProject();
+        // const project ={project_env : "development", project_name : "", project_step : "start"};
+        projectSelected = "";
         projectEnv = project.project_env;
         // const projectPath = fg.convertPathToPattern(process.env[`PROJECT_${projectSelected.toUpperCase()}`]);
         const projectObj = {...project, project_path : __dirname.substring(0,  __dirname.indexOf('node_modules'))};

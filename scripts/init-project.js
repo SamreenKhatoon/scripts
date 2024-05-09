@@ -71,15 +71,15 @@ function InitProject() {
 
     async function selectProject() {
 
-        projectList = Object.keys(getProjectsFromEnv());
+        // projectList = Object.keys(getProjectsFromEnv());
 
         const questions = [
-            {
-                type:"select",
-                name:'project_name',
-                message:"Enter Project Name",
-                choices:projectList,
-            },
+            // {
+            //     type:"select",
+            //     name:'project_name',
+            //     message:"Enter Project Name",
+            //     choices:projectList,
+            // },
             {
                 type:"select",
                 name:'project_env',
