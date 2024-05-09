@@ -1,0 +1,22 @@
+{
+  "name": "sitecore-multisite-setup",
+  "version": "1.0.0",
+  "description": "Scripts for setting up a multi page project for Sitecore",
+  "main": "index.js",
+  "scripts": {
+    "sitecore" : "node scripts/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^3.0.2",
+    "dotenv": "^16.4.5",
+    "enquirer": "^2.4.1",
+    "fast-glob": "^3.3.2",
+    "fs-extra": "^11.2.0",
+    "gray-matter": "^4.0.3",
+    "nunjucks": "^3.2.4",
+    "sass": "^1.71.1"
+  }
+}
