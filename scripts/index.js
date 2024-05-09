@@ -11,11 +11,12 @@ const init = new InitProject();
 
 async function main(){
 
-    if( !init.checkEnv()) {
-        throw new Error(".env file does not exist. Create one with the project paths specified");
-    }
+    // if( !init.checkEnv()) {
+    //     throw new Error(".env file does not exist. Create one with the project paths specified");
+    // }
 
-    const optResponse = await init.chooseOption();
+    // const optResponse = await init.chooseOption();
+    const optResponse = {choice : "start"}
 
     let initStatus = { 'status' : "error", "msg" : "init failed"};
     if(optResponse.choice === 'start'){
