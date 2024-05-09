@@ -3,12 +3,8 @@
 console.log("Script called")
 
 const path = require('path');
-const fs = require('fs');
 
-const scriptDir = __dirname;
-
-console.log(scriptDir)
-const repoDir = path.join(scriptDir, '..', '..', '..');
+const repoDir = path.join(__dirname, '..', '..', '..');
 
 console.log(repoDir)
 
