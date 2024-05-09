@@ -22,11 +22,11 @@ async function main(){
     if(optResponse.choice === 'start'){
 
         //add check for env file. move env file reading to init and return full config instead
-        // const project = await init.selectProject();
-        // projectSelected = project.project_name;
-        // projectEnv = project.project_env;
+        const project ={project_env : "development", project_name : "", };
+        projectSelected = project.project_name;
+        projectEnv = project.project_env;
         // const projectPath = fg.convertPathToPattern(process.env[`PROJECT_${projectSelected.toUpperCase()}`]);
-        const projectObj = {projectEnv : "development", project_path : __dirname.substring(0,  __dirname.indexOf('node_modules'))};
+        const projectObj = {...project, project_path : __dirname.substring(0,  __dirname.indexOf('node_modules'))};
 
         // let initStatus = { 'status' : "error", "msg" : "init failed"};
         // if(init.checkProject(projectSelected, projectPath)){
