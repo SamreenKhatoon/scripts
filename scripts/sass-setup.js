@@ -15,7 +15,7 @@ function SassSetup(config){
     }
 
     function compileSCSSFileAsString(scssFile){
-        console.log(scssFile)
+        // console.log(scssFile)
         if( !fs.existsSync(scssFile)){
             throw new Error(`Cannot read SCSS file. File ${scssFile} not found.`)
         }

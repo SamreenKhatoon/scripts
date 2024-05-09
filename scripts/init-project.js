@@ -102,10 +102,10 @@ function InitProject() {
     function checkProject(projectObj){
 
         if(fs.existsSync(projectObj.project_path)){
-            console.log(`Project ${projectObj.project_name} exists at ${projectObj.project_path}`);
+            console.log(`Project exists at ${projectObj.project_path}`);
             return true;
         }
-        console.log(`Incorrect project path ${projectObj.project_path} for ${projectObj.project_name}.`);
+        console.log(`Incorrect project path ${projectObj.project_path}`);
         return false;
     }
 
@@ -113,6 +113,7 @@ function InitProject() {
 
         const setup = { status : 'error' , 'msg' : 'setup failed'};
         const fullProjectPath = `${projectPath}/${projectName}`;
+        console.log(fullProjectPath)
         const srcFolders = ['_data/global', '_data/template', '_includes', 
                             '_layouts', 'assets/fonts','/assets/images',
                             '/assets/css', '/assets/js', '/assets/files', 'pages'
