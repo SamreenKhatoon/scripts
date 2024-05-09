@@ -25,7 +25,7 @@ async function main(){
         projectSelected = project.project_name;
         projectEnv = project.project_env;
         const projectPath = fg.convertPathToPattern(process.env[`PROJECT_${projectSelected.toUpperCase()}`]);
-        const projectObj = {...project, project_path : projectPath};
+        const projectObj = {...project, project_path : __dirname.substring(0,  __dirname.indexOf('node_modules'))};
 
         // let initStatus = { 'status' : "error", "msg" : "init failed"};
         // if(init.checkProject(projectSelected, projectPath)){
