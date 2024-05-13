@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin" : {
-    "sitecore-cli" : "./cli/index.js"
+    "sitecore-cli" : "./scripts/index.js"
   },
   "author": "",
   "license": "ISC",
