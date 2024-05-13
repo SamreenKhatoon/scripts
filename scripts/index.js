@@ -30,7 +30,8 @@ async function main(){
         projectEnv = project.project_env;
         // const projectPath = fg.convertPathToPattern(process.env[`PROJECT_${projectSelected.toUpperCase()}`]);
         console.log(path.resolve("."))
-        const projectObj = {...project, project_path : __dirname.substring(0,  __dirname.indexOf('node_modules'))};
+        // const projectObj = {...project, project_path : __dirname.substring(0,  __dirname.indexOf('node_modules'))};
+        const projectObj = {...project, project_path : path.resolve(".")};
 
         // let initStatus = { 'status' : "error", "msg" : "init failed"};
         // if(init.checkProject(projectSelected, projectPath)){
