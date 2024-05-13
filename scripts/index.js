@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 require('dotenv').config();
 const fg = require("fast-glob");
+const path = require("path");
 
 const InitProject = require("./init-project");
 const ProjectConfig = require("./project-config");
@@ -28,6 +29,7 @@ async function main(){
         projectSelected = "";
         projectEnv = project.project_env;
         // const projectPath = fg.convertPathToPattern(process.env[`PROJECT_${projectSelected.toUpperCase()}`]);
+        console.log(path.resolve("."))
         const projectObj = {...project, project_path : __dirname.substring(0,  __dirname.indexOf('node_modules'))};
 
         // let initStatus = { 'status' : "error", "msg" : "init failed"};
